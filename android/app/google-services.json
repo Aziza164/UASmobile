@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "209871036016",
+    "project_id": "mobile-7aeaf",
+    "storage_bucket": "mobile-7aeaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209871036016:android:8f5f014a5efe716fc8deb5",
+        "android_client_info": {
+          "package_name": "com.example.praktikum_api_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsC-mNwJzHUhUuYU68Af8ZACjJvEAj9Hg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
