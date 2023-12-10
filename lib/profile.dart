@@ -51,7 +51,7 @@ class _ProfileState extends State<Profile> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(),
+                    builder: (context) => HomePage(), // Replace with the actual Profile class
                   ),
                 );
               },
@@ -75,7 +75,7 @@ class _ProfileState extends State<Profile> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Login(),
+                    builder: (context) => Login(), // Replace with your login page
                   ),
                 );
               },
@@ -114,24 +114,108 @@ class _ProfileState extends State<Profile> {
                         bottomRight: Radius.circular(0),
                       ),
                     ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(20),
+                    child: Column(
+                      children: [
+                        // Profile Title Container
+                        SizedBox(height: 50),
+                        // User Avatar
+                        CircleAvatar(
+                          radius: 70,
+                          backgroundImage: AssetImage(
+                              'images/de43b96eb7cfed0cb99aa4ed1ff813e2.jpg'),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 10, bottom: 10, left: 20, right: 20),
+                    child: Container(
+                      padding: const EdgeInsets.all(20),
+                      height: 80,
+                      width: 500,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: const Offset(0, 5),
+                            color: Colors.deepPurple.withOpacity(.2),
+                            spreadRadius: 2,
+                            blurRadius: 10,
+                          ),
+                        ],
+                      ),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Profile Title Container
-                          SizedBox(height: 20),
-                          // User Avatar
-                          CircleAvatar(
-                            radius: 70,
-                            backgroundImage: AssetImage(
-                                'images/de43b96eb7cfed0cb99aa4ed1ff813e2.jpg'),
+                          Text(
+                            "Name",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'OpenSans',
+                              fontSize: 12,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            userData?['fullname'] ?? 'Full name not available',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: 'OpenSans',
+                              fontSize: 12,
+                            ),
                           ),
                         ],
                       ),
                     ),
                   ),
-                  const SizedBox(height: 10),
-                  // Rest of your widgets...
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 10, bottom: 10, left: 20, right: 20),
+                    child: Container(
+                      padding: const EdgeInsets.all(20),
+                      height: 80,
+                      width: 500,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: const Offset(0, 5),
+                            color: Colors.deepPurple.withOpacity(.2),
+                            spreadRadius: 2,
+                            blurRadius: 10,
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Email",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'OpenSans',
+                              fontSize: 12,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            userData?['email'] ?? 'Email not available',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: 'OpenSans',
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             );
