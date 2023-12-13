@@ -17,15 +17,7 @@ class IntroPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              const Color.fromARGB(255, 45, 136, 157),
-            ],
-          ),
-        ),
+        color: Color.fromARGB(255, 43, 128, 125), 
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -42,12 +34,15 @@ class IntroPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Text(
-                "Welcome to Catatan Keuangan",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+              Center(
+                child: Text(
+                  "Welcome to Catatan Keuangan",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center, // Align the text in the center
                 ),
               ),
               SizedBox(height: 20),
@@ -57,11 +52,13 @@ class IntroPage extends StatelessWidget {
                   navigateToLogin(context);
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  onPrimary: const Color(0xFF22C1CB),
+                  primary: Colors.blue,
+                  onPrimary: Colors.white,
+                  fixedSize: Size(200, 50), // Adjust the width and height as needed
                 ),
                 child: Text("Get Started"),
               ),
+
             ],
           ),
         ),

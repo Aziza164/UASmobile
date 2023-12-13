@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Intro Screen Demo',
-      home: Login(), // Change to IntroPage as the initial page
+      home: IntroPage(), // Change to IntroPage as the initial page
       debugShowCheckedModeBanner: false, // Set to false to remove the debug banner
     );
   }
